@@ -2,7 +2,7 @@
     "name": "MineWeb",
     "slug": "Mineweb",
     "author": "Eywek",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "apiID": 1,
     "configurations": {
         "slider": "true",
