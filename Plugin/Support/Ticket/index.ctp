@@ -37,7 +37,7 @@
 									    <p><button id="<?= $value['Ticket']['id'] ?>" title="<?= $Lang->get('REPLY') ?>" class="btn btn-warning btn-sm ticket-reply"><icon class="fa fa-mail-reply" style="font-size: 10px;"></icon></button></p>
 										<?php } ?>
 									</div>
-								    <p class="support"><?= before_display($value['Ticket']['content']) ?></p>
+								    <p class="support"><?= $value['Ticket']['content'] ?></p>
 								    <div class="clearfix"></div>
 								  </div>
 								</div>
