@@ -76,6 +76,11 @@
 
                             <a class="btn btn-primary btn-block" href="<?= $this->Html->url(array('controller' => 'profile', 'action' => 'index', 'plugin' => null)) ?>"><?= $Lang->get('USER__PROFILE') ?></a>
 
+                            <div style="position:relative;">
+                              <a class="btn btn-primary btn-block" href="#notifications_modal" onclick="notification.markAllAsSeen(2)" data-toggle="modal"><?= $Lang->get('NOTIFICATIONS__LIST') ?></a>
+                              <span class="notification-indicator"></span>
+                            </div>
+
                             <?php if($Permissions->can('ACCESS_DASHBOARD')) { ?>
                               <a style="color:red;" class="btn btn-primary btn-block" href="<?= $this->Html->url(array('controller' => '', 'action' => 'index', 'plugin' => 'admin')) ?>"><?= $Lang->get('GLOBAL__ADMIN_PANEL') ?></a>
                             <?php } elseif($EyPlugin->isInstalled('eywek.shop.1')) { ?>

@@ -41,11 +41,8 @@
   								<?php
                   if($value['Item']['category'] == $v['Category']['id']) {
                     $i++;
-                    $newRow = ( ( $i % ( (12 / $col) +1 ) ) == 0);
+                    $newRow = ( ( $i % ( (12 / $col) ) ) == 0);
                   ?>
-
-                    <?= ($newRow) ? '</div>' : '' ?>
-                    <?= ($newRow) ? '<div class="row">' : '' ?>
 
   									<div class="col-sm-3 col-lg-3 col-md-3">
                       <div class="thumbnail">
@@ -57,7 +54,10 @@
                           <?php if($isConnected AND $Permissions->can('CAN_BUY')) { ?><button class="btn btn-primary btn-clear pull-right display-item" data-item-id="<?= $value['Item']['id'] ?>"><?= $Lang->get('SHOP__BUY') ?></button> <?php } ?>
                           <div class="clearfix"></div>
                       </div>
-                  </div>
+                    </div>
+
+                    <?= ($newRow) ? '</div>' : '' ?>
+                    <?= ($newRow) ? '<div class="row">' : '' ?>
 
   								<?php } ?>
 

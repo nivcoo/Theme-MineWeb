@@ -1,7 +1,7 @@
 <div class="push-nav"></div>
 <div class="brand-vote">
 	<div class="container">
-		<p class="text-center"><i class="fa fa-comments-o"></i> Voter pour notre serveur !</p>
+		<p class="text-center"><i class="fa fa-comments-o"></i> Votez pour notre serveur !</p>
 		<center>
 			<?php if($Permissions->can('VOTE_SHOW_REWARDS')) { ?>
 				<button data-toggle="modal" data-target="#rewards" class="btn btn-primary btn-lg center-block"><?= $Lang->get('VOTE__REWARDS_TITLE') ?></button>
@@ -25,7 +25,7 @@
 			  <div class="panel-body">
 			  	<?php foreach ($websites as $key => $value) { ?>
 			  		<div class="col-md-4">
-						<button class="btn btn-success choose_website btn-block" id="<?= $key ?>"><?= $value['website_name'] ?></button>
+						<button style="margin-bottom:5px;" class="btn btn-success choose_website btn-block" id="<?= $key ?>"><?= $value['website_name'] ?></button>
 					</div>
 				<?php } ?>
 			  </div>

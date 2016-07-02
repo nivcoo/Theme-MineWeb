@@ -59,7 +59,24 @@
     <?= $this->Html->script('bootstrap.js') ?>
     <?= $this->Html->script('app.js') ?>
     <?= $this->Html->script('form.js') ?>
+    <?= $this->Html->script('notification.js') ?>
     <script>
+    <?php if($isConnected) { ?>
+      // Notifications
+        var notification = new $.Notification({
+          'url': {
+            'get': '<?= $this->Html->url(array('plugin' => false, 'controller' => 'notifications', 'action' => 'getAll')) ?>',
+            'clear': '<?= $this->Html->url(array('plugin' => false, 'controller' => 'notifications', 'action' => 'clear', 'NOTIF_ID')) ?>',
+            'clearAll': '<?= $this->Html->url(array('plugin' => false, 'controller' => 'notifications', 'action' => 'clearAll')) ?>',
+            'markAsSeen': '<?= $this->Html->url(array('plugin' => false, 'controller' => 'notifications', 'action' => 'markAsSeen', 'NOTIF_ID')) ?>',
+            'markAllAsSeen': '<?= $this->Html->url(array('plugin' => false, 'controller' => 'notifications', 'action' => 'markAllAsSeen')) ?>'
+          },
+          'messages': {
+            'markAsSeen': '<?= $Lang->get('NOTIFICATION__MARK_AS_SEEN') ?>',
+            'notifiedBy': '<?= $Lang->get('NOTIFICATION__NOTIFIED_BY') ?>'
+          }
+        });
+    <?php } ?>
     // Config FORM/APP.JS
 
     var LIKE_URL = "<?= $this->Html->url(array('controller' => 'news', 'action' => 'like')) ?>";
