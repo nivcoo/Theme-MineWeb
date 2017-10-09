@@ -4,6 +4,7 @@
     "author": "Eywek",
     "version": "1.2.0",
     "apiID": 1,
+    "slider": true,
     "configurations": {
         "slider": "true",
         "navbar": "navbar2",
@@ -13,7 +14,7 @@
     "supported": {
         "CMS": "^1.2.0",
         "eywek.shop.1": "^1.0.0",
-        "eywek.support.2": "^0.3.0",
+        "eywek.support.2": "^1.2.0",
         "eywek.vote.3": "^2.0.0"
     }
 }
