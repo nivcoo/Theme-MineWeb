@@ -4,6 +4,7 @@
     "author": "Eywek",
     "version": "1.2.1",
     "apiID": 1,
+    "slider": true,
     "configurations": {
         "slider": "true",
         "navbar": "navbar2",
