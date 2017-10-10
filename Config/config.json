@@ -12,8 +12,8 @@
     },
     "supported": {
         "CMS": "^1.2.0",
-        "eywek.shop.1": "^1.0.0",
-        "eywek.support.2": "^0.3.0",
+        "eywek.shop.1": "^1.1.0",
+        "eywek.support.2": "^1.0.2",
         "eywek.vote.3": "^2.0.0"
     }
 }
